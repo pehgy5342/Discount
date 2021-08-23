@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="折扣計算器"
+        app:titleTextColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/money"
+        android:textColor="@color/gray"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+        app:layout_constraintEnd_toStartOf="@+id/tv_price"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="180sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:text="@string/_00"
+        android:textCursorDrawable="@null"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_clear"
+        app:layout_constraintStart_toEndOf="@+id/money"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <Button
+        android:id="@+id/btn_1"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_coin_one"
+        android:text="@string/_1"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+    <Button
+        android:id="@+id/btn_5"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape_coin_five"
+        android:text="@string/_5"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_10"
+        app:layout_constraintStart_toEndOf="@+id/btn_1"
+        app:layout_constraintTop_toTopOf="@+id/btn_1" />
+
+    <Button
+        android:id="@+id/btn_10"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape_coin_five"
+        android:text="@string/_10"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_5"
+        app:layout_constraintEnd_toStartOf="@+id/btn_50"
+        app:layout_constraintStart_toEndOf="@+id/btn_5"
+        app:layout_constraintTop_toTopOf="@+id/btn_5" />
+
+    <Button
+        android:id="@+id/btn_50"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape_coin_fifty"
+        android:text="@string/_50"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_10"
+        app:layout_constraintTop_toTopOf="@+id/btn_10" />
+
+    <Button
+        android:id="@+id/btn_100"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textStyle="bold"
+        android:background="#E0608C"
+        android:text="@string/_100"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_1" />
+
+    <Button
+        android:id="@+id/btn_500"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#DF6D66"
+        android:text="@string/_500"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_1000"
+        app:layout_constraintStart_toEndOf="@+id/btn_100"
+        app:layout_constraintTop_toTopOf="@+id/btn_100" />
+
+    <Button
+        android:id="@+id/btn_1000"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:background="#7586DF"
+        android:text="@string/_1000"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_5000"
+        app:layout_constraintStart_toEndOf="@+id/btn_500"
+        app:layout_constraintTop_toTopOf="@+id/btn_500" />
+
+
+    <Button
+        android:id="@+id/btn_5000"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:background="#8BC34A"
+        android:textStyle="bold"
+        android:text="@string/_5000"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_1000"
+        app:layout_constraintTop_toTopOf="@+id/btn_1000" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        style="@android:style/Widget.Holo.Light.Button.Inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/btn_shape"
+        android:text="@string/clear"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_price"
+        app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+    <TextView
+        android:id="@+id/tv_present"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/present"
+        android:textColor="@color/gray"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_500" />
+
+    <TextView
+        android:id="@+id/tv_presentNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/_0"
+        android:textColor="@color/gray"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_present"
+        app:layout_constraintTop_toTopOf="@+id/tv_present" />
+
+    <TextView
+        android:id="@+id/tv_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/_00"
+        android:textColor="@color/gray"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_presentNum"
+        app:layout_constraintTop_toTopOf="@+id/tv_present" />
+
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
+        android:maxHeight="15dp"
+        android:progressDrawable="@drawable/seekbar_bg"
+        android:splitTrack="false"
+        android:thumb="@drawable/seekbar_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_off" />
+
+    <TextView
+        android:id="@+id/tv_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/sale"
+        android:textColor="@color/gray"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_present"
+        app:layout_constraintTop_toBottomOf="@+id/tv_present" />
+
+    <TextView
+        android:id="@+id/tv_offNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/_00"
+        android:textColor="@color/gray"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_off"
+        app:layout_constraintTop_toTopOf="@+id/tv_off" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
